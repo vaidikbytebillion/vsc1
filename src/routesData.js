@@ -8,7 +8,7 @@ import Contacts from './components/works/contacts.js';
 
 const RoutesData = () => {
     return (
-        <div>
+        <div >
             <Routes>
                 <Route path="/" element={<Home/>}/>
                 <Route path="/About" element={<About/>}/>

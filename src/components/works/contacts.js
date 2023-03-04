@@ -13,7 +13,7 @@ import { useNavigate } from 'react-router-dom';
 import { Tooltip } from '@mui/material';
 
 
-export default function Contacts() {
+const  Contacts=()=> {
 
 
 
@@ -57,3 +57,5 @@ export default function Contacts() {
                 </>
                 );
 }
+
+export default Contacts;

@@ -4,11 +4,18 @@ import RoutesData from './routesData';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
+import Image from './images/backGround.jpg';
 
 
 function App() {
 
   const prefersDarkMode = useMediaQuery('(prefers-color-scheme: dark)');
+  const [screeWidth,setScreenWidth]=React.useState('');
+  const [screeHeight,setScreenHeight]=React.useState('')
+
+  React.useEffect(()=>{
+    
+  },[])
 
   const theme = React.useMemo(
     () =>
@@ -21,10 +28,17 @@ function App() {
   );
 
   return (
-    <ThemeProvider theme={theme}>
-      <CssBaseline />
-      <RoutesData />
-    </ThemeProvider>
+    <div style={{
+      backgroundImage: `url(${Image})`,
+      backgroundRepeat: "no-repeat",
+      backgroundSize: "contain",
+      
+    }}>
+      <ThemeProvider theme={theme}>
+        <CssBaseline />
+        <RoutesData />
+      </ThemeProvider>
+    </div>
   );
 }
 

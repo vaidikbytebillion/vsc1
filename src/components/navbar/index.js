@@ -13,6 +13,7 @@ import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
 import { useNavigate } from 'react-router-dom';
+import DateTimeDisplay from '../dateAndTime';
 
 const pages = ['About', 'Works', 'Contacts'];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
@@ -38,13 +39,13 @@ function NavBar() {
   };
 
   return (
-    <AppBar position="static" sx={{backgroundColor:'rgba(0, 0, 0, 0.87)'}}>
+    <AppBar position="static" sx={{ backgroundColor: 'rgba(0, 0, 0, 0.87)' }}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
           <Typography
             variant="h6"
-            onClick={()=>navigate('/')}
+            onClick={() => navigate('/')}
             noWrap
             component="a"
             href="/"
@@ -58,7 +59,7 @@ function NavBar() {
               textDecoration: 'none',
             }}
           >
-            hoME 
+            hoME
           </Typography>
 
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
@@ -91,8 +92,8 @@ function NavBar() {
               }}
             >
               {pages.map((page) => (
-                <MenuItem key={page} 
-                onClick={()=>navigate(`/${page}`)}
+                <MenuItem key={page}
+                  onClick={() => navigate(`/${page}`)}
 
                 >
                   <Typography textAlign="center">{page}</Typography>
@@ -123,7 +124,7 @@ function NavBar() {
             {pages.map((page) => (
               <Button
                 key={page}
-                onClick={()=>navigate(`/${page}`)}
+                onClick={() => navigate(`/${page}`)}
                 sx={{ my: 2, color: 'white', display: 'block' }}
               >
                 {page}
@@ -133,7 +134,7 @@ function NavBar() {
 
           <Box sx={{ flexGrow: 0 }}>
             <Tooltip title="Open settings">
-              <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
+              <IconButton onClick={navigate('/Contacts')} sx={{ p: 0 }}>
                 <Avatar alt="Vemy Sharp" src="/static/images/avatar/2.jpg" />
               </IconButton>
             </Tooltip>
@@ -160,6 +161,7 @@ function NavBar() {
               ))}
             </Menu>
           </Box>
+
         </Toolbar>
       </Container>
     </AppBar>

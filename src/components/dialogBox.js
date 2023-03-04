@@ -16,11 +16,11 @@ export default function AlertDialogSlide() {
 
   const handleClickOpen = () => {
     setOpen(true);
-    localStorage.setItem('dialogShown', 'true');
   };
-
+  
   const handleClose = () => {
     setOpen(false);
+    localStorage.setItem('dialogShown', 'true');
   };
 
   React.useEffect(() => {

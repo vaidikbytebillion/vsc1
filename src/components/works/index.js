@@ -1,4 +1,5 @@
 import React from 'react';
+import StandardImageList from '../imageList';
 import NavBar from '../navbar';
 
 const Works =()=>{
@@ -6,6 +7,7 @@ const Works =()=>{
         <div>
         <NavBar/>
         this is Work
+        <StandardImageList/>
         </div>
     );
 }

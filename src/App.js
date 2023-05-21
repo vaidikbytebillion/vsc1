@@ -3,15 +3,14 @@ import './App.css';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
-import NavBar from './components/navBar';
-import { Home } from './pages/Home';
+import RoutesData from './routesData';
+
 
 
 function App() {
 
   const prefersDarkMode = useMediaQuery('(prefers-color-scheme: dark)');
-  const [screeWidth, setScreenWidth] = React.useState('');
-  const [screeHeight, setScreenHeight] = React.useState('')
+ 
 
   React.useEffect(() => {
 
@@ -36,9 +35,7 @@ function App() {
     }}>
       <ThemeProvider theme={theme}>
         <CssBaseline />
-        <NavBar />
-        <Home/>
-        
+        <RoutesData/>
         
       </ThemeProvider>
     </div>

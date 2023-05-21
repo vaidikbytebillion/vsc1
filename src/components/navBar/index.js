@@ -5,14 +5,14 @@ import '../../index.css'
 const NavBar = () => {
     return (
         <nav className='navBar'>
-            <ul  className='title'>
+            <ul className='title'>
                 VAIDIKKKKK
             </ul>
             <ul>
-                <Link className='li' >Home</Link>
-                <Link className='li' >About</Link>
-                <Link className='li' >Works</Link>
-                <Link className='li' >hi</Link>
+                <Link to={'/'} className='li' >Home</Link>
+                <Link to={'/about'} className='li' >Gallery</Link>
+                <Link to={'/'}  className='li' >Career</Link>
+                <Link to={'/'}  className='li' >hi</Link>
             </ul>
             <ul className='rhombus'>
 
